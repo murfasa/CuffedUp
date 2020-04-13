@@ -31,7 +31,7 @@ Note: You must have the InteractSound resource in order for cuff noises to work!
 files {
     'client/html/index.html',
     'client/html/sounds/cuff.ogg',  # ADD THIS
-    'client/html/sounds/uncuffcuff.ogg'  # ADD THIS
+    'client/html/sounds/uncuff.ogg'  # ADD THIS
 }
 ```
 
