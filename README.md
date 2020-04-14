@@ -18,7 +18,7 @@ https://medal.tv/clips/22275941/PkXNu3id1jBG
 
 ## Usage
 Hold ``X`` to put hands up.
-In order to handcuff someone, go up to them and hold left click to target them. Then, press ``E``.
+In order to handcuff someone, go up to them and hold right click to target them. Then, press ``E``.
 
 ## Dependencies
 * [InteractSound](https://forum.cfx.re/t/release-play-custom-sounds-for-interactions/8282)
