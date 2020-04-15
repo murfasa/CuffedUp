@@ -36,7 +36,7 @@ Citizen.CreateThread(function()
                 local susCoords = GetEntityCoords(entity)
                 local dist = Vdist2(pedCoords.x, pedCoords.y, pedCoords.z, susCoords.x, susCoords.y, susCoords.z)
 
-                if (entity ~= 0) and dist < 1 then
+                if (entity ~= 0) and dist < 1.5 then
                     drawNotification('~o~[Cuff Script] ~g~Cuffing player!')
                     TriggerServerEvent('cu:togglecuffentity', GetPlayerServerId(playerEntity), GetPlayerServerId(player))
                 else
