@@ -7,9 +7,9 @@ local function getEntity(player) -- function To Get Entity Player Is Aiming At
 end
 
 function GetPlayerFromPed(ped)
-	for a = 0, 64 do
-		if GetPlayerPed(a) == ped then
-			return a
+	for _, player in ipairs(GetActivePlayers()) do
+		if GetPlayerPed(player) == ped then
+			return player
 		end
 	end
 	return -1
@@ -23,10 +23,10 @@ end
 -- Functions
 
 Citizen.CreateThread(function()
+    local player = PlayerId()
     while true do
-        Citizen.Wait(0)
-        local player = PlayerId()
         local ped = GetPlayerPed(PlayerId())
+        Citizen.Wait(0)
         if IsPedInMeleeCombat(ped) then
             if IsControlJustReleased(1, 51) then
 
@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
 	while not HasAnimDictLoaded(hudict) do
 		Citizen.Wait(100)
 	end
-    
+
 	while true do
 		Citizen.Wait(0)
 		if IsControlJustPressed(1, 323) then --Start holding X
@@ -71,7 +71,7 @@ Citizen.CreateThread(function()
             end
         end
     end
-    
+
 end)
 
 RegisterNetEvent('cu:cuffanim')
